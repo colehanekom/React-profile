@@ -1,17 +1,17 @@
 import React, {useState} from 'react';
 import {FaBars, FaTimes} from 'react-icons/fa'
-import Logo from '../assets/citi.png'
+import Logo from '../assets/ch-logo.png'
 
 const Navbar = () => {
   const [nav, setNav] = useState(false)
   const handleClick = () => setNav(!nav)
 
   return (
-    <div className="fixed w-full h-[70px] flex justify-between items-center px-4 bg-zinc-950 text-white">
+    <div className="fixed w-full h-[50px] flex justify-between items-center px-4 bg-[#111111] text-white">
      
      {/*logo*/}
       <div>
-        <img src={Logo} alt="Logo Image" style={{width:'50px'}} />
+        <img src={Logo} alt="Logo Image" style={{width:'60px'}} />
       </div>
 
        {/*menu*/}
