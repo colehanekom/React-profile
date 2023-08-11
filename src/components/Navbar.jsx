@@ -15,7 +15,7 @@ const Navbar = () => {
       </div>
 
        {/*menu*/}
-       <ul className={`md:flex ${nav ? 'hidden' : ''}`}> {/* Hidden until it passes medium point */}
+       <ul className='hidden md:flex'> {/*hidden until it passes medium point */}
         <li className="px-4 cursor-pointer">Home</li>
         <li className="px-4 cursor-pointer">About Me</li>
         <li className="px-4 cursor-pointer">Skills</li>
