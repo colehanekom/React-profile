@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import {FaBars, FaTimes} from 'react-icons/fa'
 import Logo from '../assets/ch-logo.png'
+import { Link, Button, Element, Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
 
 const Navbar = () => {
   const [nav, setNav] = useState(false)
@@ -14,13 +15,23 @@ const Navbar = () => {
         <img src={Logo} alt="Logo Image" style={{width:'60px'}} />
       </div>
 
-       {/*menu*/}
-       <ul className='hidden md:flex'> {/*hidden until it passes medium point */}
-        <li className="px-4 cursor-pointer">Home</li>
-        <li className="px-4 cursor-pointer">About Me</li>
-        <li className="px-4 cursor-pointer">Skills</li>
-        <li className="px-4 cursor-pointer">Projects</li>
-        <li className="px-4 cursor-pointer">Contact Me</li>
+      {/*menu*/}
+      <ul className='hidden md:flex'> {/*hidden until it passes medium point */}
+        <li className="px-4 cursor-pointer"> <Link activeClass="active" to="home"  smooth={true}  duration={500}>
+          Home
+        </Link></li>
+        <li className="px-4 cursor-pointer"> <Link  to="about"  smooth={true}  duration={500} >
+          About Me
+        </Link></li>
+        <li className="px-4 cursor-pointer"> <Link  to="skills"  smooth={true}  duration={500} >
+          Skills
+        </Link></li>
+        <li className="px-4 cursor-pointer"> <Link  to="projects"  smooth={true}  duration={500} >
+          Projects
+        </Link></li>
+        <li className="px-4 cursor-pointer"> <Link  to="contact"  smooth={true}  duration={500} >
+          Contact Me
+        </Link></li>
       </ul>
 
         {/*Hamburger*/}
