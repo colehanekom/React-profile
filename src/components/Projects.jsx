@@ -1,6 +1,7 @@
 import React from 'react'
-import GitHub from '../assets/github.png';
-import School from '../assets/school.jpg';
+import School from '../assets/school.png'
+import Games from '../assets/games.png'
+import Starbucks from '../assets/starbucks.png'
 
 const Projects = () => {
   return (
@@ -13,48 +14,48 @@ const Projects = () => {
             
             {/*Grid item*/}
             <div className='grid sm:grid-cols-2 md:grid-cols-3 gap-4'>
-                <div style={{backgroundImage: `url(${GitHub})`}} 
-                className='shadow-lg shadow-[#10C623] group container rounded-md flex justify-center items-center mx-auto content-div'>
+                <div style={{backgroundImage: `url(${School})`}} 
+                className='shadow-lg shadow-[#10C623] group container rounded-md flex justify-center items-center mx-3 content-div'>
                     
                     {/*Hover effects*/}
                     <div className='opacity-0 group-hover:opacity-100'>
                         <span className='text-2xl font-bold tracking-wider'>
-                            React JS Application
+                          Mzamomtsha Primary School Website
                         </span>
                         <div className='pt-8 text-center'>
-                            <a href='/'> {/*link to demo or github code*/}
+                            <a href="https://dynamic-unicorn-de5d72.netlify.app/" target="_blank" rel="noopener noreferrer"> {/*link to demo or github code*/}
                                 <button className='text-center rounded-lg px-4 py-3 m-2 bg-white text-[#111111] font-bold text-lg '>Demo</button>
                             </a>
                         </div>
                     </div>
                 </div>
 
-                <div style={{backgroundImage: `url(${GitHub})`}} 
-                className='shadow-lg shadow-[#10C623] group container rounded-md flex justify-center items-center mx-auto content-div'>
+                <div style={{backgroundImage: `url(${Games})`}} 
+                className='shadow-lg shadow-[#10C623] group container rounded-md flex justify-center items-center mx-3 content-div'>
                     
                     {/*Hover effects*/}
                     <div className='opacity-0 group-hover:opacity-100'>
                         <span className='text-2xl font-bold tracking-wider'>
-                            React JS Application
+                          Games website
                         </span>
                         <div className='pt-8 text-center'>
-                            <a href='/'>
+                            <a href="https://genuine-zuccutto-710c6f.netlify.app" target="_blank" rel="noopener noreferrer">
                                 <button className='text-center rounded-lg px-4 py-3 m-2 bg-white text-[#111111] font-bold text-lg '>Demo</button>
                             </a>
                         </div>
                     </div>
                 </div>
 
-                <div style={{backgroundImage: `url(${GitHub})`}} 
-                className='shadow-lg shadow-[#10C623] group container rounded-md flex justify-center items-center mx-auto content-div'>
+                <div style={{backgroundImage: `url(${Starbucks})`}} 
+                className='shadow-lg shadow-[#10C623] group container rounded-md flex justify-center items-center mx-3 content-div'>
                 
                     {/*Hover effects*/}
                     <div className='opacity-0 group-hover:opacity-100'>
                         <span className='text-2xl font-bold tracking-wider'>
-                            React JS Application
+                            Starbucks Landing Page
                         </span>
                         <div className='pt-8 text-center'>
-                            <a href='/'>
+                            <a href='https://preeminent-empanada-763889.netlify.app/' target="_blank" rel="noopener noreferrer">
                                 <button className='text-center rounded-lg px-4 py-3 m-2 bg-white text-[#111111] font-bold text-lg '>Demo</button>
                             </a>
                         </div>
