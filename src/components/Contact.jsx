@@ -1,4 +1,5 @@
 import React from 'react'
+import { FaGithub, FaLinkedin } from 'react-icons/fa';
 
 const Contact = () => {
   return (
@@ -14,6 +15,15 @@ const Contact = () => {
                 <div>
                   <p className='text-3xl pb-2'>If You Have Any Project In Mind</p>
                   <p>I would be delighted to hear from you! Please don't hesitate to reach out using the contact information provided below. Whether you have a question, a potential collaboration in mind, or simply want to connect, I am always open to new opportunities. Feel free to email me or connect with me on LinkedIn. I strive to be responsive and will do my best to get back to you promptly. Let's connect and explore how we can work together to create amazing things in the world of technology. I look forward to hearing from you!</p>
+                 {/* Icons */}
+            <div className='flex justify-start space-x-4 my-4'>
+              <a href="https://github.com/colehanekom" target="_blank" rel="noopener noreferrer" className='text-[#10C623] hover:text-white'>
+                <FaGithub size={30} />
+              </a>
+              <a href="https://www.linkedin.com/mwlite/in/cole-hanekom-63a4a813b" target="_blank" rel="noopener noreferrer" className='text-[#10C623] hover:text-white'>
+                <FaLinkedin size={30} />
+              </a>
+            </div>
                 </div>
 
             <div>
