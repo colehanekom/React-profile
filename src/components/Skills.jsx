@@ -4,6 +4,7 @@ import CSS from '../assets/css.png';
 import JavaScript from '../assets/javascript.png';
 import Java from '../assets/java.png';
 import Python from '../assets/python.png';
+import MySQL from '../assets/mysql.svg'
 
 const Skills = () => {
   return (
@@ -35,6 +36,10 @@ const Skills = () => {
             <div className='shadow-md shadow-[#10C623] hover:scale-110 duration-500'>
               <img className='w-20 mx-auto py-4' src={Python} alt='Python icon' />
               <p>Python</p>
+            </div>
+            <div className='shadow-md shadow-[#10C623] hover:scale-110 duration-500'>
+              <img className='w-20 mx-auto py-4' src={MySQL} alt='MySQL icon' />
+              <p>MySQL</p>
             </div>
           </div>
       </div>
