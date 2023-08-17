@@ -36,7 +36,7 @@ const Home = () => {
       </div>
             <div>
             <a href={CV} target="_blank" rel="noopener noreferrer">
-              <button className='text-white border-2 bg-[#10C623] px-4 py-2 my-2 rounded-md flex items-center '>Download CV</button>
+              <button className='text-white border-2 bg-[#10C623] px-4 py-2 my-2 rounded-md flex items-center transition-all transform hover:scale-125'>Download CV</button>
             </a>
             </div>
              </div>
