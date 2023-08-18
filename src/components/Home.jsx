@@ -1,55 +1,56 @@
-import React from 'react'
-import CV from '../assets/Cole Hanekom CV.pdf'
-import {TypeAnimation} from 'react-type-animation'
-import Logo from '../assets/ch-logo.png'
+import React from 'react';
+import CV from '../assets/Cole Hanekom CV.pdf';
+import Logo from '../assets/ch-logo.png';
+import { TypeAnimation } from 'react-type-animation';
 
 const Home = () => {
   return (
-    <div name='home' className='w-full h-screen bg-[#111111]'>
-        {/*container*/}
-        <div className='max-w-[1000px] mx-auto px-8 flex flex-col justify-center h-full'>
-            
-
-            <div className='max-w-[1000px] w-full grid sm:grid-cols-2 gap-8 px-4'>
-            <div>
-            <p className='text-2xl text-white'><span className='text-[#10C623]'>Hello</span>, I Am</p>
-            <h1 className='text-7xl sm:7xl font-bold text-white'>Cole <span className='text-[#10C623]'>Hanekom</span></h1>
-           <div> {/*<h2 className='text-2xl sm:7xl py-4 font-semibold text-white'>Full Stack Developer</h2>*/}
-            <h2 className='text-2xl sm:7xl py-4 font-semibold text-white'>
-        <TypeAnimation
-      sequence={[
-        // Same substring at the start will only be typed out once, initially
-        'Full Stack Developer',
-        2000, // wait 2s before replacing "Full Stack Developer" with "Web Developer"
-        'Web Developer',
-        2000,
-        'Software Developer',
-        2000,
-      ]}
-      wrapper="span"
-      speed={50}
-      style={{ fontSize: '1em', paddingLeft:'5px' }}
-      repeat={Infinity}
-        />
-
-      </h2>
-      </div>
-            <div>
-            <a href={CV} target="_blank" rel="noopener noreferrer">
-              <button className='text-white border-2 bg-[#10C623] px-4 py-2 my-2 rounded-md flex items-center transition-all transform hover:scale-125'>Download CV</button>
-            </a>
+    <div name="home" className="w-full min-h-screen bg-[#111111] flex flex-col justify-center items-center">
+      <div className="max-w-[1000px] mx-auto px-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+          {/* Content Section */}
+          <div className="md:order-1 text-center md:text-left">
+            <p className="text-2xl text-white">
+              <span className="text-[#10C623]">Hello</span>, I Am
+            </p>
+            <h1 className="text-4xl md:text-6xl font-bold text-white">
+              Cole <span className="text-[#10C623]">Hanekom</span>
+            </h1>
+            <div className="mt-4 md:mt-8">
+              <h2 className="text-xl md:text-2xl font-semibold text-white">
+                <TypeAnimation
+                  sequence={[
+                    'Full Stack Developer',
+                    2000,
+                    'Web Developer',
+                    2000,
+                    'Software Developer',
+                    2000,
+                  ]}
+                  wrapper="span"
+                  speed={50}
+                  style={{ fontSize: '1em', paddingLeft: '5px' }}
+                  repeat={Infinity}
+                />
+              </h2>
             </div>
-             </div>
+            <div className="mt-6 md:mt-12">
+              <a href={CV} target="_blank" rel="noopener noreferrer">
+                <button className="text-white border-2 bg-[#10C623] px-4 py-2 rounded-md flex items-center transition-all transform hover:scale-105">
+                  Download CV
+                </button>
+              </a>
+            </div>
+          </div>
 
-              <div>
-                <img src={Logo} alt="Logo" style={{width:'450px'}}/>
-              </div>
-
-           
+          {/* Logo Section */}
+          <div className="md:order-2 text-center">
+            <img src={Logo} alt="Logo" className="w-80 gap-14" />
           </div>
         </div>
+      </div>
     </div>
-    )
-  }
+  );
+};
 
-  export default Home 
+export default Home;
