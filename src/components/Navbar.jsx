@@ -8,17 +8,17 @@ const Navbar = () => {
   const handleClick = () => setNav(!nav)
 
   return (
-    <div className="fixed w-full h-[90px] flex justify-between items-center px-4 bg-[#111111] text-white text-2xl">
+    <div className="fixed w-full h-[70px] flex justify-between items-center px-4 bg-[#111111] text-white text-2xl">
      
       {/* Logo (linked to home) */}
       <div>
         <Link to="home" smooth={true} duration={500}>
-          <img src={Logo} alt="Logo Image" style={{ width: '130px' }} />
+          <img src={Logo} alt="Logo Image" style={{ width: '80px' }} />
         </Link>
       </div>
 
       {/*menu*/}
-      <ul className='hidden md:flex'> {/*hidden until it passes medium point */}
+      <ul className='hidden md:flex space-x-6'> {/*hidden until it passes medium point */}
         <li className="px-4 cursor-pointer"> <Link activeClass="active" to="home"  smooth={true}  duration={500}>
           Home
         </Link></li>
@@ -42,7 +42,8 @@ const Navbar = () => {
         </div>
 
         {/*Mobile menu*/}
-        <ul className={!nav ? 'hidden' : 'absolute top-0 left-0 w-56 bg-[#111111] flex flex-col justify-center items-center'}>
+        {nav && ( 
+        <ul className='absolute top-0 left-0 w-56 bg-[#111111] flex flex-col justify-center items-center'>
           <li className="py-4 text-1xl"><Link onClick={handleClick} activeClass="active" to="home"  smooth={true}  duration={500}>
           Home
         </Link></li>
@@ -59,6 +60,7 @@ const Navbar = () => {
           Contact Me
         </Link></li>
         </ul>
+        )}
     </div>
   )
 }
