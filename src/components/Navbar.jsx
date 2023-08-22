@@ -8,7 +8,7 @@ const Navbar = () => {
   const handleClick = () => setNav(!nav)
 
   return (
-    <div className="fixed w-full h-[70px] flex justify-between items-center px-4 bg-[#111111] text-white text-2xl">
+    <div className="fixed w-full h-[70px] flex justify-between items-center px-4 bg-gradient-to-r from-[#10C623] to-[#111111] text-white text-2xl">
      
       {/* Logo (linked to home) */}
       <div>
