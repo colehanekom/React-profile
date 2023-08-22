@@ -19,19 +19,19 @@ const Navbar = () => {
 
       {/*menu*/}
       <ul className='hidden md:flex space-x-6'> {/*hidden until it passes medium point */}
-        <li className="px-4 cursor-pointer"> <Link activeClass="active" to="home"  smooth={true}  duration={500}>
+        <li className="px-4 hover:text-[#10C623] cursor-pointer"> <Link activeClass="active" to="home"  smooth={true}  duration={500}>
           Home
         </Link></li>
-        <li className="px-4 cursor-pointer"> <Link  to="about"  smooth={true}  duration={500} >
+        <li className="px-4 hover:text-[#10C623] cursor-pointer"> <Link  to="about"  smooth={true}  duration={500} >
           About Me
         </Link></li>
-        <li className="px-4 cursor-pointer"> <Link  to="skills"  smooth={true}  duration={500} >
+        <li className="px-4 hover:text-[#10C623] cursor-pointer"> <Link  to="skills"  smooth={true}  duration={500} >
           Skills
         </Link></li>
-        <li className="px-4 cursor-pointer"> <Link  to="projects"  smooth={true}  duration={500} >
+        <li className="px-4 hover:text-[#10C623] cursor-pointer"> <Link  to="projects"  smooth={true}  duration={500} >
           Projects
         </Link></li>
-        <li className="px-4 cursor-pointer"> <Link  to="contact"  smooth={true}  duration={500} >
+        <li className="px-4 hover:text-[#10C623] cursor-pointer"> <Link  to="contact"  smooth={true}  duration={500} >
           Contact Me
         </Link></li>
       </ul>
