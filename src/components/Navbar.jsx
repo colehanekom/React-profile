@@ -29,18 +29,26 @@ const Navbar = () => {
           active={activeMenuItem === 'home'}
           label="Home"
         />
-        <li className="px-4 hover:text-[#10C623] cursor-pointer"> <Link  to="about"  smooth={true}  duration={500} >
-          About Me
-        </Link></li>
-        <li className="px-4 hover:text-[#10C623] cursor-pointer"> <Link  to="skills"  smooth={true}  duration={500} >
-          Skills
-        </Link></li>
-        <li className="px-4 hover:text-[#10C623] cursor-pointer"> <Link  to="projects"  smooth={true}  duration={500} >
-          Projects
-        </Link></li>
-        <li className="px-4 hover:text-[#10C623] cursor-pointer"> <Link  to="contact"  smooth={true}  duration={500} >
-          Contact Me
-        </Link></li>
+        <MenuItem
+          onClick={() => handleClick('about')}
+          active={activeMenuItem === 'about'}
+          label="About"
+        />
+        <MenuItem
+          onClick={() => handleClick('skills')}
+          active={activeMenuItem === 'skills'}
+          label="Skills"
+        />
+        <MenuItem
+          onClick={() => handleClick('projects')}
+          active={activeMenuItem === 'projects'}
+          label="Projects"
+        />
+        <MenuItem
+          onClick={() => handleClick('contact')}
+          active={activeMenuItem === 'contact'}
+          label="Contact"
+        />
       </ul>
 
         {/*Hamburger*/}
