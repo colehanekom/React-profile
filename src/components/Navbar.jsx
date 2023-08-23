@@ -52,30 +52,46 @@ const Navbar = () => {
       </ul>
 
         {/*Hamburger*/}
-        <div onClick={handleClick} className="md:hidden z-10">
-          {!nav ? <FaBars /> : <FaTimes />}
+        <div className="md:hidden z-10">
+          {!nav ? <FaBars onClick={() => setNav(true)} /> : <FaTimes onClick={() => setNav(false)} />}
         </div>
 
+
         {/*Mobile menu*/}
-        {nav && ( 
-        <ul className='absolute top-0 left-0 w-56 bg-[#111111] flex flex-col justify-center items-center'>
-          <li className="py-4 text-1xl hover:text-[#10C623] cursor-pointer"><Link onClick={handleClick} activeClass="active" to="home"  smooth={true}  duration={500}>
-          Home
-        </Link></li>
-          <li className="py-4 text-1xl hover:text-[#10C623] cursor-pointer"><Link onClick={handleClick} to="about"  smooth={true}  duration={500} >
-          About Me
-        </Link></li>
-          <li className="py-4 text-1xl hover:text-[#10C623] cursor-pointer"><Link onClick={handleClick} to="skills"  smooth={true}  duration={500} >
-          Skills
-        </Link></li>
-          <li className="py-4 text-1xl hover:text-[#10C623] cursor-pointer"><Link onClick={handleClick} to="projects"  smooth={true}  duration={500} >
-          Projects
-        </Link></li>
-          <li className="py-4 text-1xl hover:text-[#10C623] cursor-pointer"><Link onClick={handleClick} to="contact"  smooth={true}  duration={500} >
-          Contact Me
-        </Link></li>
+        {nav && (
+        <ul className="absolute top-0 left-0 w-56 bg-[#111111] flex flex-col justify-center items-center">
+          <MenuItem
+            onClick={() => handleClick('home')}
+            active={activeMenuItem === 'home'}
+            label="Home"
+            isMobile
+          />
+          <MenuItem
+            onClick={() => handleClick('about')}
+            active={activeMenuItem === 'about'}
+            label="About"
+            isMobile
+          />
+          <MenuItem
+            onClick={() => handleClick('skills')}
+            active={activeMenuItem === 'skills'}
+            label="Skills"
+            isMobile
+          />
+          <MenuItem
+            onClick={() => handleClick('projects')}
+            active={activeMenuItem === 'projects'}
+            label="Projects"
+            isMobile
+          />
+          <MenuItem
+            onClick={() => handleClick('contact')}
+            active={activeMenuItem === 'contact'}
+            label="Contact"
+            isMobile
+          />
         </ul>
-        )}
+      )}
     </div>
   )
 }
