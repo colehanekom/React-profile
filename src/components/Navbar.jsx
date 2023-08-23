@@ -5,7 +5,12 @@ import { Link, Button, Element, Events, animateScroll as scroll, scrollSpy, scro
 
 const Navbar = () => {
   const [nav, setNav] = useState(false)
-  const handleClick = () => setNav(!nav)
+  const [activeMenuItem, setActiveMenuItem] = useState('home'); // Initialize with 'home'
+
+  const handleClick = (menuItem) => {
+    setNav(false);
+    setActiveMenuItem(menuItem);
+  };
 
   return (
     <div className="fixed w-full h-[70px] flex justify-between items-center px-4 bg-gradient-to-r from-[#10C623] to-[#111111] text-white text-2xl">
@@ -19,9 +24,11 @@ const Navbar = () => {
 
       {/*menu*/}
       <ul className='hidden md:flex space-x-6'> {/*hidden until it passes medium point */}
-        <li className="px-4 hover:text-[#10C623] cursor-pointer"> <Link activeClass="active" to="home"  smooth={true}  duration={500}>
-          Home
-        </Link></li>
+        <MenuItem
+          onClick={() => handleClick('home')}
+          active={activeMenuItem === 'home'}
+          label="Home"
+        />
         <li className="px-4 hover:text-[#10C623] cursor-pointer"> <Link  to="about"  smooth={true}  duration={500} >
           About Me
         </Link></li>
@@ -64,5 +71,27 @@ const Navbar = () => {
     </div>
   )
 }
+
+// MenuItem component
+//The placement of the MenuItem component at the bottom of the code structures the code for readability and maintainability.
+const MenuItem = ({ onClick, active, label, isMobile }) => {
+  return (
+    <li
+      className={`px-4 ${
+        active ? 'text-[#10C623]' : 'hover:text-[#10C623]'
+      } cursor-pointer`}
+    >
+      <Link
+        onClick={onClick}
+        to={isMobile ? label.toLowerCase().replace(' ', '-') : label.toLowerCase()}
+        smooth={true}
+        duration={500}
+        activeClass="active"
+      >
+        {label}
+      </Link>
+    </li>
+  );
+};
 
 export default Navbar;
