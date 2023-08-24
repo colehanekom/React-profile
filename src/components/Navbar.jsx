@@ -56,27 +56,27 @@ const Navbar = () => {
       <ul className='hidden md:flex space-x-6'> {/*hidden until it passes medium point */}
         <MenuItem
           onClick={() => handleClick('home')}
-          active={activeMenuItem === 'home'}
+          //active={activeMenuItem === 'home'}
           label="Home"
         />
         <MenuItem
           onClick={() => handleClick('about')}
-          active={activeMenuItem === 'about'}
+          //active={activeMenuItem === 'about'}
           label="About"
         />
         <MenuItem
           onClick={() => handleClick('skills')}
-          active={activeMenuItem === 'skills'}
+          //active={activeMenuItem === 'skills'}
           label="Skills"
         />
         <MenuItem
           onClick={() => handleClick('projects')}
-          active={activeMenuItem === 'projects'}
+          //active={activeMenuItem === 'projects'}
           label="Projects"
         />
         <MenuItem
           onClick={() => handleClick('contact')}
-          active={activeMenuItem === 'contact'}
+          //active={activeMenuItem === 'contact'}
           label="Contact"
         />
       </ul>
