@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import {FaBars, FaTimes} from 'react-icons/fa'
 import Logo from '../assets/ch-logo-removebg.png'
 import { Link, Button, Element, Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
@@ -11,6 +11,36 @@ const Navbar = () => {
     setNav(false);
     setActiveMenuItem(menuItem);
   };
+
+  useEffect(() => {
+    const observerOptions = {
+      root: null,
+      rootMargin: '0px',
+      threshold: 0.5,
+    };
+
+    const observerCallback = (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          setActiveMenuItem(entry.target.id);
+        }
+      });
+    };
+
+    const observer = new IntersectionObserver(observerCallback, observerOptions);
+
+    const sectionIds = ['home', 'about', 'skills', 'projects', 'contact'];
+    sectionIds.forEach((id) => {
+      const target = document.getElementById(id);
+      if (target) {
+        observer.observe(target);
+      }
+    });
+
+    return () => {
+      observer.disconnect();
+    };
+  }, []);
 
   return (
     <div className="fixed w-full h-[70px] flex justify-between items-center px-4 bg-gradient-to-r from-[#10C623] to-[#111111] text-white text-2xl">
@@ -111,6 +141,9 @@ const MenuItem = ({ onClick, active, label, isMobile }) => {
         smooth={true}
         duration={500}
         activeClass="active"
+        spy={true} // Add this line to enable scrolling spy
+        offset={-70} // Adjust this offset value as needed based on your fixed navbar height
+        isDynamic={true} // Add this line to enable dynamic scrolling
       >
         {label}
       </Link>
