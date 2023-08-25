@@ -7,7 +7,7 @@ const Home = () => {
   return (
     <div name="home" className="w-full min-h-screen bg-[#111111] flex flex-col justify-center items-center">
       <div className="max-w-[1000px] mx-auto px-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-20 items-center">
           {/* Content Section */}
           <div className="md:order-1 text-center md:text-left">
             <p className="text-2xl text-white">
@@ -45,7 +45,7 @@ const Home = () => {
 
           {/* Logo Section */}
           <div className="md:order-2 text-center">
-            <img src={Logo} alt="Logo" className="w-80 gap-14" />
+            <img src={Logo} alt="Logo" className="w-80" />
           </div>
         </div>
       </div>
