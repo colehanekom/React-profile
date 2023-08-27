@@ -1,7 +1,42 @@
-import React from 'react';
+import { data } from 'autoprefixer';
+import React, {useState} from 'react';
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
 
 const Contact = () => {
+  const [userData, setUserData] = useState(
+    {
+      name: '', email: '', mobile: '', message: ''
+    }
+  )
+  let name, value
+  console.log(userData)
+  const data = (e) =>
+  {
+    name = e.target.name
+    value = e.target.value
+    setUserData({...userData, [name]:value})
+  }
+  const submit = async(e) =>
+  {
+    const {name, email, mobile, message} = userData;
+    e.preventDefault();
+    const option = {
+      method:'POST',
+      headers: {
+        'Content-type': 'application/json'
+      },
+      body: JSON.stringify({
+        name, email, mobile, message
+      })
+    }
+    const res = await fetch('https://react-profile-3dd8b-default-rtdb.firebaseio.com/Messages.json', option)
+    console.log(res)
+    if(res)
+    {
+      alert('Message Sent')
+    }
+  }
+
   return (
     <div name="contact" className="w-full min-h-screen bg-[#111111] flex justify-center items-center p-4">
       <div className="flex flex-col justify-center items-center w-full h-full text-white">
@@ -28,11 +63,11 @@ const Contact = () => {
           </div>
           <div>
             <form method="POST" className="flex flex-col max-w-[600px] w-full">
-              <input className="bg-white text-[#111111] p-2 rounded-md" type="text" placeholder="Your Name" name="name" required />
-              <input className="my-3 p-2 bg-white text-[#111111] rounded-md" type="email" placeholder="Your Email" name="email" required />
-              <input className="p-2 bg-white text-[#111111] rounded-md" type="text" placeholder="Your Mobile Number" name="mobile" required />
-              <textarea className="my-3 bg-white p-2 rounded-md text-[#111111]" name="message" rows="8" placeholder="How can I help you?" required></textarea>
-              <button className="text-white border-2 bg-[#10C623] px-4 py-3 my-2 mx-auto rounded-md flex items-center transition-all transform hover:scale-110">
+              <input className="bg-white text-[#111111] p-2 rounded-md" type="text" placeholder="Your Name" name="name" value={userData.Name} onChange={data} required />
+              <input className="my-3 p-2 bg-white text-[#111111] rounded-md" type="email" placeholder="Your Email" name="email" value={userData.Email} onChange={data} required />
+              <input className="p-2 bg-white text-[#111111] rounded-md" type="text" placeholder="Your Mobile Number" name="mobile" value={userData.Mobile} onChange={data} required />
+              <textarea className="my-3 bg-white p-2 rounded-md text-[#111111]" name="message" rows="8" placeholder="How can I help you?" value={userData.Message} onChange={data} required></textarea>
+              <button onClick={submit} className="text-white border-2 bg-[#10C623] px-4 py-3 my-2 mx-auto rounded-md flex items-center transition-all transform hover:scale-110">
                 Submit
               </button>
             </form>
