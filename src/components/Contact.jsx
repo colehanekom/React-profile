@@ -27,11 +27,11 @@ const Contact = () => {
             </div>
           </div>
           <div>
-            <form action="" className="flex flex-col max-w-[600px] w-full">
+            <form method="POST" className="flex flex-col max-w-[600px] w-full">
               <input className="bg-white text-[#111111] p-2 rounded-md" type="text" placeholder="Your Name" name="name" required />
               <input className="my-3 p-2 bg-white text-[#111111] rounded-md" type="email" placeholder="Your Email" name="email" required />
               <input className="p-2 bg-white text-[#111111] rounded-md" type="text" placeholder="Your Mobile Number" name="mobile" required />
-              <textarea className="my-3 bg-white p-2 rounded-md" name="message" rows="8" placeholder="How can I help you?" required></textarea>
+              <textarea className="my-3 bg-white p-2 rounded-md text-[#111111]" name="message" rows="8" placeholder="How can I help you?" required></textarea>
               <button className="text-white border-2 bg-[#10C623] px-4 py-3 my-2 mx-auto rounded-md flex items-center transition-all transform hover:scale-110">
                 Submit
               </button>
