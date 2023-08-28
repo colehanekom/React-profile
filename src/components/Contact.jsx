@@ -39,6 +39,9 @@ const Contact = () => {
     if (!userData.mobile) {
       newErrors.mobile = 'Mobile number is required';
       valid = false;
+    } else if (!/^[0-9]+$/.test(userData.mobile)) {
+      newErrors.mobile = 'Please enter only numbers';
+      valid = false;
     } else {
       newErrors.mobile = '';
     }
