@@ -7,19 +7,67 @@ const Contact = () => {
     {
       name: '', email: '', mobile: '', message: ''
     }
-  )
-  let name, value
-  console.log(userData)
-  const data = (e) =>
+  );
+
+  const [formErrors, setFormErrors] = useState(
+    {
+      name: '', email: '', mobile: '', message: '',
+    }
+  );
+
+  const validateForm = () => {
+    let valid = true;
+    const newErrors = { ...formErrors };
+
+    if (!userData.name) {
+      newErrors.name = 'Name is required';
+      valid = false;
+    } else {
+      newErrors.name = '';
+    }
+
+    if (!userData.email) {
+      newErrors.email = 'Email is required';
+      valid = false;
+    } else if (!/\S+@\S+\.\S+/.test(userData.email)) {
+      newErrors.email = 'Invalid email format';
+      valid = false;
+    } else {
+      newErrors.email = '';
+    }
+
+    if (!userData.mobile) {
+      newErrors.mobile = 'Mobile number is required';
+      valid = false;
+    } else {
+      newErrors.mobile = '';
+    }
+
+    if (!userData.message) {
+      newErrors.message = 'Message is required';
+      valid = false;
+    } else {
+      newErrors.message = '';
+    }
+
+    setFormErrors(newErrors);
+    return valid;
+  };
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setUserData((prevData) => ({
+      ...prevData,
+      [name]: value,
+    }));
+  };
+
+  const handleSubmit = async(e) =>
   {
-    name = e.target.name
-    value = e.target.value
-    setUserData({...userData, [name]:value})
-  }
-  const submit = async(e) =>
-  {
-    const {name, email, mobile, message} = userData;
     e.preventDefault();
+
+    if (validateForm()) {
+    const {name, email, mobile, message} = userData;
     const option = {
       method:'POST',
       headers: {
@@ -28,14 +76,17 @@ const Contact = () => {
       body: JSON.stringify({
         name, email, mobile, message
       })
-    }
+    };
+
     const res = await fetch('https://react-profile-3dd8b-default-rtdb.firebaseio.com/Messages.json', option)
     console.log(res)
+
     if(res)
     {
       alert('Message Sent')
     }
   }
+};
 
   return (
     <div name="contact" className="w-full min-h-screen bg-[#111111] flex justify-center items-center p-4">
@@ -62,15 +113,54 @@ const Contact = () => {
             </div>
           </div>
           <div>
-            <form method="POST" className="flex flex-col max-w-[600px] w-full">
-              <input className="bg-white text-[#111111] p-2 rounded-md" type="text" placeholder="Your Name" name="name" value={userData.Name} onChange={data} required />
-              <input className="my-3 p-2 bg-white text-[#111111] rounded-md" type="email" placeholder="Your Email" name="email" value={userData.Email} onChange={data} required />
-              <input className="p-2 bg-white text-[#111111] rounded-md" type="text" placeholder="Your Mobile Number" name="mobile" value={userData.Mobile} onChange={data} required />
-              <textarea className="my-3 bg-white p-2 rounded-md text-[#111111]" name="message" rows="8" placeholder="How can I help you?" value={userData.Message} onChange={data} required></textarea>
-              <button onClick={submit} className="text-white border-2 bg-[#10C623] px-4 py-3 my-2 mx-auto rounded-md flex items-center transition-all transform hover:scale-110">
-                Submit
-              </button>
-            </form>
+          <form method="POST" className="flex flex-col max-w-[600px] w-full">
+          <input
+            className={`bg-white text-[#111111] p-2 rounded-md ${formErrors.name && 'border-red-500'}`}
+            type="text"
+            placeholder="Your Name"
+            name="name"
+            value={userData.name}
+            onChange={handleChange}
+            required
+          />
+          {formErrors.name && <p className="text-red-500">{formErrors.name}</p>}
+          <input
+            className={`my-3 p-2 bg-white text-[#111111] rounded-md ${formErrors.email && 'border-red-500'}`}
+            type="email"
+            placeholder="Your Email"
+            name="email"
+            value={userData.email}
+            onChange={handleChange}
+            required
+          />
+          {formErrors.email && <p className="text-red-500">{formErrors.email}</p>}
+          <input
+            className={`p-2 bg-white text-[#111111] rounded-md ${formErrors.mobile && 'border-red-500'}`}
+            type="text"
+            placeholder="Your Mobile Number"
+            name="mobile"
+            value={userData.mobile}
+            onChange={handleChange}
+            required
+          />
+          {formErrors.mobile && <p className="text-red-500">{formErrors.mobile}</p>}
+          <textarea
+            className={`my-3 bg-white p-2 rounded-md text-[#111111] ${formErrors.message && 'border-red-500'}`}
+            name="message"
+            rows="8"
+            placeholder="How can I help you?"
+            value={userData.message}
+            onChange={handleChange}
+            required
+          />
+          {formErrors.message && <p className="text-red-500">{formErrors.message}</p>}
+          <button
+            onClick={handleSubmit}
+            className="text-white border-2 bg-[#10C623] px-4 py-3 my-2 mx-auto rounded-md flex items-center transition-all transform hover:scale-110"
+          >
+            Submit
+          </button>
+        </form>
           </div>
         </div>
       </div>
