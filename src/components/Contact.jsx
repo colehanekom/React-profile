@@ -87,6 +87,14 @@ const Contact = () => {
     if(res)
     {
       alert('Message Sent')
+
+      // Reset the form fields after successful submission
+      setUserData({
+        name: '',
+        email: '',
+        mobile: '',
+        message: '',
+      });
     }
   }
 };
