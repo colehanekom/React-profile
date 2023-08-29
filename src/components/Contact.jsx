@@ -84,7 +84,7 @@ const Contact = () => {
       })
     };
 
-    const res = await fetch('https://react-profile-3dd8b-default-rtdb.firebaseio.com/Messages.json', option)
+    const res = await fetch('https://online-portfolio-e07e9-default-rtdb.firebaseio.com/Messages.json', option)
     console.log(res)
 
     if(res)
