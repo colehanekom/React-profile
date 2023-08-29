@@ -1,0 +1,8 @@
+{
+  "projects": {
+    "default": "online-portfolio-e07e9",
+    "production": "online-portfolio-e07e9"
+  },
+  "targets": {},
+  "etags": {}
+}
