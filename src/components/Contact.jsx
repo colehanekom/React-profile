@@ -1,8 +1,11 @@
 import { data } from 'autoprefixer';
 import React, {useState} from 'react';
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
+import ReCAPTCHA from "react-google-recaptcha";
 
 const Contact = () => {
+  const [verified, setVerified] = useState(false);
+  
   const [userData, setUserData] = useState(
     {
       name: '', email: '', mobile: '', message: ''
@@ -99,6 +102,12 @@ const Contact = () => {
   }
 };
 
+  //recaptcha function
+  function onChange(value) {
+    console.log("Captcha value:", value);
+    setVerified(true);
+  }
+
   return (
     <div name="contact" className="w-full min-h-screen bg-[#111111] flex justify-center items-center p-4">
       <div className="flex flex-col justify-center items-center w-full h-full text-white">
@@ -165,10 +174,11 @@ const Contact = () => {
             required
           />
           {formErrors.message && <p className="text-red-500">{formErrors.message}</p>}
-          <button
-            onClick={handleSubmit}
-            className="text-white border-2 bg-[#10C623] px-4 py-3 my-2 mx-auto rounded-md flex items-center transition-all transform hover:scale-110"
-          >
+          <ReCAPTCHA
+              sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"
+              onChange={onChange}
+            />
+          <button type='submit' onClick={handleSubmit} className="text-white border-2 bg-[#10C623] px-4 py-3 my-2 mx-auto rounded-md flex items-center transition-all transform hover:scale-110" disabled={!verified}>
             Submit
           </button>
         </form>
