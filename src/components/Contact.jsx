@@ -1,9 +1,27 @@
 import { data } from 'autoprefixer';
-import React, {useState} from 'react';
+import React, {useState, useRef} from 'react';
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
 import ReCAPTCHA from "react-google-recaptcha";
+import emailjs from '@emailjs/browser';
 
 const Contact = () => {
+
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs.sendForm('service_939f4oe', 'template_0iwq4hp', form.current, 'LGd88-0X30fvnrdRS')
+      .then((result) => {
+          console.log(result.text);
+          e.target.reset();
+          console.log("message sent");
+      }, (error) => {
+          console.log(error.text);
+      });
+      console.log("form sent");
+  };
+
   const [verified, setVerified] = useState(false);
   
   const [userData, setUserData] = useState(
@@ -85,6 +103,18 @@ const Contact = () => {
     };
 
     const res = await fetch('https://online-portfolio-e07e9-default-rtdb.firebaseio.com/Messages.json', option)
+
+
+    emailjs.sendForm('service_939f4oe', 'template_0iwq4hp', form.current, 'LGd88-0X30fvnrdRS')
+      .then((result) => {
+          console.log(result.text);
+          console.log("message sent");
+      }, (error) => {
+          console.log(error.text);
+      });
+      console.log("form sent");
+
+
     console.log(res)
 
     if(res)
@@ -98,8 +128,10 @@ const Contact = () => {
         mobile: '',
         message: '',
       });
-    }
-  }
+    };
+  };
+
+  console.log("handle submit form sent");
 };
 
   //recaptcha function
@@ -133,7 +165,7 @@ const Contact = () => {
             </div>
           </div>
           <div>
-          <form method="POST" className="flex flex-col max-w-[600px] w-full">
+          <form ref={form} method="POST" className="flex flex-col max-w-[600px] w-full">
           <input
             className={`bg-white text-[#111111] p-2 rounded-md ${formErrors.name && 'border-red-500'}`}
             type="text"
@@ -175,7 +207,7 @@ const Contact = () => {
           />
           {formErrors.message && <p className="text-red-500">{formErrors.message}</p>}
           <ReCAPTCHA
-              sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"
+              sitekey="6LcrJesnAAAAAPccA8VQm5d4FugGfXRp_WBv-s3M"
               onChange={onChange}
             />
           <button type='submit' onClick={handleSubmit} className="text-white border-2 bg-[#10C623] px-4 py-3 my-2 mx-auto rounded-md flex items-center transition-all transform hover:scale-110" disabled={!verified}>
