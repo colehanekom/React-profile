@@ -6,22 +6,27 @@ import emailjs from '@emailjs/browser';
 
 const Contact = () => {
 
+ // Ref for the form element
 const form = useRef();
 
+// State to manage CAPTCHA verification
 const [verified, setVerified] = useState(false);
   
+// State to manage form input data
 const [userData, setUserData] = useState(
   {
     name: '', email: '', mobile: '', message: ''
   }
 );
 
+// State to manage form validation errors
   const [formErrors, setFormErrors] = useState(
     {
       name: '', email: '', mobile: '', message: '',
     }
   );
 
+   // Function to validate form inputs
   const validateForm = () => {
     let valid = true;
     const newErrors = { ...formErrors };
@@ -64,6 +69,7 @@ const [userData, setUserData] = useState(
     return valid;
   };
 
+   // Function to handle input changes
   const handleChange = (e) => {
     const { name, value } = e.target;
     setUserData((prevData) => ({
@@ -72,6 +78,7 @@ const [userData, setUserData] = useState(
     }));
   };
 
+  // Function to handle form submission
   const handleSubmit = async(e) =>
   {
     e.preventDefault();
