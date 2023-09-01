@@ -1,9 +1,25 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import CV from '../assets/Cole Hanekom CV.pdf';
 import Logo from '../assets/ch-logo.png';
 import { TypeAnimation } from 'react-type-animation';
 
 const Home = () => {
+  const [isFlashing, setIsFlashing] = useState(false);
+
+  useEffect(() => {
+    const flashingInterval = setInterval(() => {
+      setIsFlashing((prevIsFlashing) => !prevIsFlashing);
+    }, 1000); // Flash every 1 second
+
+    return () => {
+      clearInterval(flashingInterval);
+    };
+  }, []);
+
+  const buttonClass = `text-white border-2 px-4 py-2 rounded-md flex items-center ${
+    isFlashing ? 'glow-button' : ''
+  }`;
+
   return (
     <div name="home" className="w-full min-h-screen bg-[#111111] flex flex-col justify-center items-center">
       <div className="max-w-[1000px] mx-auto px-8">
@@ -36,7 +52,7 @@ const Home = () => {
             </div>
             <div className="mt-6 md:mt-12 text-center md:text-left">
               <a href={CV} target="_blank" rel="noopener noreferrer" className="inline-block md:block">
-                <button className="text-white border-2  bg-[#10C623] px-4 py-2 rounded-md flex items-center hover:scale-105">
+                <button className={buttonClass}>
                   Download CV
                 </button>
               </a>
