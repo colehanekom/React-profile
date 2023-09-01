@@ -6,29 +6,15 @@ import emailjs from '@emailjs/browser';
 
 const Contact = () => {
 
-  const form = useRef();
+const form = useRef();
 
-  const sendEmail = (e) => {
-    e.preventDefault();
-
-    emailjs.sendForm('service_939f4oe', 'template_0iwq4hp', form.current, 'LGd88-0X30fvnrdRS')
-      .then((result) => {
-          console.log(result.text);
-          e.target.reset();
-          console.log("message sent");
-      }, (error) => {
-          console.log(error.text);
-      });
-      console.log("form sent");
-  };
-
-  const [verified, setVerified] = useState(false);
+const [verified, setVerified] = useState(false);
   
-  const [userData, setUserData] = useState(
-    {
-      name: '', email: '', mobile: '', message: ''
-    }
-  );
+const [userData, setUserData] = useState(
+  {
+    name: '', email: '', mobile: '', message: ''
+  }
+);
 
   const [formErrors, setFormErrors] = useState(
     {
