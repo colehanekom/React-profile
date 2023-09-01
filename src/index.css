@@ -36,3 +36,30 @@
 .active {
     color: #10c623; /* Green color for active link */
   }
+
+  /* Home CSS */
+.glow-button {
+    animation: pulse-border 1s infinite alternate, background-glow 1s infinite alternate;
+    border-color: #00FF00; /* Initial border color */
+    background-color: #10c623; /* Initial background color */
+    color: white;
+  }
+  
+  @keyframes pulse-border {
+    from {
+      border-color: #10C623; /* Initial border color */
+    }
+    to {
+      border-color: #10C623; /* Border color when pulsing */
+    }
+  }
+  
+  @keyframes background-glow {
+    from {
+      background-color: #111111; /* Initial background color */
+    }
+    to {
+      background-color: #111111; /* Background color when glowing */
+    }
+  }
+  
