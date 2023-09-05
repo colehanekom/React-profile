@@ -10,7 +10,7 @@ const About = () => {
 
             {/* Text */}
             <div className='sm:pb-4 pr-4'>
-              <p className='text-2xl md:text-3xl lg:text-4xl font-bold mb-2'>
+              <p className='text-2xl md:text-3xl lg:text-7xl font-bold mb-2'>
                 About <span className='text-[#10C623]'>Me</span>
               </p>
               <p className='text-sm sm:text-base md:text-lg'>
