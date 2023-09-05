@@ -12,10 +12,10 @@ const Skills = () => {
       {/* Container */}
       <div className='max-w-[1000px] mx-auto p-4 pt-24'>
         <div className='text-center'>
-          <p className='text-2xl md:text-3xl lg:text-4xl font-bold mb-2'>
+          <p className='text-2xl md:text-3xl lg:text-7xl font-bold mb-2'>
             My <span className='text-[#10C623]'>Skills</span>
           </p>
-          <p className='text-sm sm:text-base md:text-lg'>
+          <p className='pt-4 text-sm sm:text-base md:text-lg lg:text-2xl'>
             What I have experience in
           </p>
         </div>
