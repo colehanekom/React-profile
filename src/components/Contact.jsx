@@ -140,7 +140,6 @@ const [userData, setUserData] = useState(
           <div className="sm:text-left pb-4 pt-11 pl-4">
             <p className="text-4xl font-bold">Contact <span className="text-[#10C623]">Me</span></p>
           </div>
-          <div></div>
         </div>
         <div className="max-w-[1000px] w-full grid sm:grid-cols-2 gap-8 px-4">
           <div>
@@ -203,7 +202,7 @@ const [userData, setUserData] = useState(
               sitekey="6LcrJesnAAAAAPccA8VQm5d4FugGfXRp_WBv-s3M"
               onChange={onChange}
             />
-          <button type='submit' onClick={handleSubmit} className="text-white border-2 bg-[#10C623] px-4 py-3 my-2 mx-auto rounded-md flex items-center transition-all transform hover:scale-110" disabled={!verified}>
+          <button type='submit' onClick={handleSubmit} className="text-white border-2 bg-[#10C623] px-4 py-3 my-2 mr-auto rounded-md flex items-center transition-all transform hover:scale-110" disabled={!verified}>
             Submit
           </button>
         </form>
