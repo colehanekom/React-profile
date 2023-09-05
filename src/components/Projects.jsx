@@ -9,7 +9,7 @@ const Projects = () => {
       {/* Container */}
       <div className='max-w-[1000px] mx-auto p-4 pt-24 flex flex-col justify-center w-full h-full'>
         <div className='pb-8 text-center'>
-          <p className='text-3xl md:text-4xl font-bold'>
+          <p className='text-3xl md:text-4xl lg:text-7xl font-bold'>
             Latest <span className='text-[#10C623]'>Projects</span>
           </p>
         </div>
