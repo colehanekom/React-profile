@@ -7,17 +7,17 @@ const Home = () => {
   return (
     <div name="home" className="w-full min-h-screen bg-[#111111] flex flex-col justify-center items-center">
       <div className="max-w-[1000px] mx-auto px-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-20 items-center">
+        <div className="grid grid-cols-1 md:grid-cols-2 space-x-36 items-center">
           {/* Content Section */}
           <div className="md:order-1 text-center md:text-left">
-            <p className="text-2xl text-white">
+            <p className="text-2xl md:text-4xl text-white">
               <span className="text-[#10C623]">Hello</span>, I Am
             </p>
-            <h1 className="text-4xl md:text-6xl font-bold text-white">
+            <h1 className="text-4xl md:text-6xl lg:text-9xl font-bold text-white">
               Cole <span className="text-[#10C623]">Hanekom</span>
             </h1>
             <div className="mt-4 md:mt-8">
-              <h2 className="text-xl md:text-2xl font-semibold text-white">
+              <h2 className="text-xl md:text-4xl font-semibold text-white">
                 <TypeAnimation
                   sequence={[
                     'Full Stack Developer',
