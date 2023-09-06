@@ -1,13 +1,13 @@
 import React from 'react';
 import CV from '../assets/Cole Hanekom CV.pdf';
-import Logo from '../assets/ch-logo.png';
+import Logo from '../assets/ch-logo-removebg.png'
 import { TypeAnimation } from 'react-type-animation';
 
 const Home = () => {
   return (
     <div name="home" className="w-full min-h-screen bg-[#111111] flex flex-col justify-center items-center">
       <div className="max-w-[1000px] mx-auto px-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 space-x-36 items-center">
+        <div className="grid grid-cols-1 md:grid-cols-2 items-center gap-14">
           {/* Content Section */}
           <div className="md:order-1 text-center md:text-left">
             <p className="text-2xl md:text-4xl text-white">
@@ -45,7 +45,7 @@ const Home = () => {
 
           {/* Logo Section */}
           <div className="md:order-2 text-center">
-            <img src={Logo} alt="Logo" className="w-80" />
+            <img src={Logo} alt="Logo" className="w-max" />
           </div>
         </div>
       </div>
