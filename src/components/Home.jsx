@@ -44,7 +44,7 @@ const Home = () => {
           </div>
 
           {/* Logo Section */}
-          <div className="md:order-2 text-center">
+          <div className="md:order-2">
             <img src={Logo} alt="Logo" className="w-max" />
           </div>
         </div>
