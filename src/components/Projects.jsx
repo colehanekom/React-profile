@@ -23,7 +23,7 @@ const Projects = () => {
             {/* Hover effects */}
             <div className='opacity-0 group-hover:opacity-100'>
               <span className='text-xl md:text-2xl font-bold tracking-wider'>
-                Mzamomtsha Primary School Website
+                Primary School Website
               </span>
               <div className='pt-4 md:pt-8 text-center'>
                 <a
