@@ -15,7 +15,7 @@ const Projects = () => {
         </div>
 
         {/* Grid item */}
-        <div className='grid sm:grid-cols-2 md:grid-cols-3 gap-4'>
+        <div className='grid sm:grid-cols-2 md:grid-cols-3 gap-10'>
           <div
             style={{ backgroundImage: `url(${School})` }}
             className='shadow-lg shadow-[#10C623] group container rounded-md flex justify-center items-center mx-3 content-div'
