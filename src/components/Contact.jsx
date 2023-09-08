@@ -48,10 +48,7 @@ const [userData, setUserData] = useState(
       newErrors.email = '';
     }
 
-    if (!userData.mobile) {
-      newErrors.mobile = 'Mobile number is required';
-      valid = false;
-    } else if (!/^[0-9]+$/.test(userData.mobile)) {
+     if (userData.mobile && !/^[0-9]+$/.test(userData.mobile)) {
       newErrors.mobile = 'Please enter only numbers';
       valid = false;
     } else {
@@ -181,7 +178,6 @@ const [userData, setUserData] = useState(
             name="mobile"
             value={userData.mobile}
             onChange={handleChange}
-            required
           />
           {formErrors.mobile && <p className="text-red-500">{formErrors.mobile}</p>}
           <textarea
