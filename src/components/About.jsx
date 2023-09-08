@@ -27,7 +27,7 @@ const About = () => {
             </div>
 
             <div className='flex justify-center items-center'>
-              <img src={Image} alt='Image' className=' md:w-screen' />
+              <img src={Image} alt='Image' className=' md:w-screen shadow-lg shadow-gray-400' />
             </div>
           </div>
         </div>
