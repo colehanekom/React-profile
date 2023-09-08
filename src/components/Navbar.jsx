@@ -56,27 +56,22 @@ const Navbar = () => {
       <ul className='hidden md:flex space-x-6'> {/*hidden until it passes medium point */}
         <MenuItem
           onClick={() => handleClick('home')}
-          //active={activeMenuItem === 'home'}
           label="Home"
         />
         <MenuItem
           onClick={() => handleClick('about')}
-          //active={activeMenuItem === 'about'}
           label="About"
         />
         <MenuItem
           onClick={() => handleClick('skills')}
-          //active={activeMenuItem === 'skills'}
           label="Skills"
         />
         <MenuItem
           onClick={() => handleClick('projects')}
-          //active={activeMenuItem === 'projects'}
           label="Projects"
         />
         <MenuItem
           onClick={() => handleClick('contact')}
-          //active={activeMenuItem === 'contact'}
           label="Contact"
         />
       </ul>
@@ -92,31 +87,26 @@ const Navbar = () => {
         <ul className="absolute top-0 left-0 w-56 bg-[#111111] flex flex-col justify-center items-center">
           <MenuItem
             onClick={() => handleClick('home')}
-            //active={activeMenuItem === 'home'}
             label="Home"
             isMobile
           />
           <MenuItem
             onClick={() => handleClick('about')}
-            //active={activeMenuItem === 'about'}
             label="About"
             isMobile
           />
           <MenuItem
             onClick={() => handleClick('skills')}
-            //active={activeMenuItem === 'skills'}
             label="Skills"
             isMobile
           />
           <MenuItem
             onClick={() => handleClick('projects')}
-            //active={activeMenuItem === 'projects'}
             label="Projects"
             isMobile
           />
           <MenuItem
             onClick={() => handleClick('contact')}
-            //active={activeMenuItem === 'contact'}
             label="Contact"
             isMobile
           />
