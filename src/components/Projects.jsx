@@ -1,6 +1,6 @@
 import React from 'react';
 import School from '../assets/school.png';
-import Games from '../assets/games.png';
+import Restaurant from '../assets/restaurant.png';
 import Starbucks from '../assets/starbucks.png';
 
 const Projects = () => {
@@ -40,17 +40,17 @@ const Projects = () => {
           </div>
 
           <div
-            style={{ backgroundImage: `url(${Games})` }}
+            style={{ backgroundImage: `url(${Restaurant})` }}
             className='shadow-lg shadow-[#10C623] group container rounded-md flex justify-center items-center mx-3 content-div'
           >
             {/* Hover effects */}
             <div className='opacity-0 group-hover:opacity-100'>
               <span className='text-xl md:text-2xl font-bold tracking-wider'>
-                Games website
+                Restaurant Landing Page
               </span>
               <div className='pt-4 md:pt-8 text-center'>
                 <a
-                  href='https://genuine-zuccutto-710c6f.netlify.app'
+                  href='https://dazzling-platypus-52df7c.netlify.app/'
                   target='_blank'
                   rel='noopener noreferrer'
                 >
