@@ -1,7 +1,7 @@
 import React from 'react';
 import School from '../assets/school.png';
 import Restaurant from '../assets/restaurant.png';
-import Starbucks from '../assets/starbucks.png';
+import Playstation from '../assets/playstation.png';
 
 const Projects = () => {
   return (
@@ -63,17 +63,17 @@ const Projects = () => {
           </div>
 
           <div
-            style={{ backgroundImage: `url(${Starbucks})` }}
+            style={{ backgroundImage: `url(${Playstation})` }}
             className='shadow-lg shadow-[#10C623] group container rounded-md flex justify-center items-center mx-3 content-div'
           >
             {/* Hover effects */}
             <div className='opacity-0 group-hover:opacity-100'>
               <span className='text-xl md:text-2xl font-bold tracking-wider'>
-                Starbucks Landing Page
+                Playstation Website
               </span>
               <div className='pt-4 md:pt-8 text-center'>
                 <a
-                  href='https://preeminent-empanada-763889.netlify.app/'
+                  href='https://gorgeous-figolla-302171.netlify.app/'
                   target='_blank'
                   rel='noopener noreferrer'
                 >
