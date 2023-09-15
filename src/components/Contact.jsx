@@ -151,6 +151,7 @@ const [userData, setUserData] = useState(
           </div>
           <div>
           <form ref={form} method="POST" className="flex flex-col max-w-[600px] w-full">
+          {formErrors.name && <p className="text-red-500">{formErrors.name}</p>}
           <input
             className={`bg-white text-[#111111] p-2 rounded-md ${formErrors.name && 'border-red-500'}`}
             type="text"
@@ -160,7 +161,7 @@ const [userData, setUserData] = useState(
             onChange={handleChange}
             required
           />
-          {formErrors.name && <p className="text-red-500">{formErrors.name}</p>}
+           {formErrors.email && <p className="text-red-500">{formErrors.email}</p>}
           <input
             className={`my-3 p-2 bg-white text-[#111111] rounded-md ${formErrors.email && 'border-red-500'}`}
             type="email"
@@ -170,7 +171,7 @@ const [userData, setUserData] = useState(
             onChange={handleChange}
             required
           />
-          {formErrors.email && <p className="text-red-500">{formErrors.email}</p>}
+           {formErrors.mobile && <p className="text-red-500">{formErrors.mobile}</p>}
           <input
             className={`p-2 bg-white text-[#111111] rounded-md ${formErrors.mobile && 'border-red-500'}`}
             type="text"
@@ -179,7 +180,7 @@ const [userData, setUserData] = useState(
             value={userData.mobile}
             onChange={handleChange}
           />
-          {formErrors.mobile && <p className="text-red-500">{formErrors.mobile}</p>}
+          {formErrors.message && <p className="text-red-500">{formErrors.message}</p>}
           <textarea
             className={`my-3 bg-white p-2 rounded-md text-[#111111] ${formErrors.message && 'border-red-500'}`}
             name="message"
@@ -189,12 +190,11 @@ const [userData, setUserData] = useState(
             onChange={handleChange}
             required
           />
-          {formErrors.message && <p className="text-red-500">{formErrors.message}</p>}
           <ReCAPTCHA
               sitekey="6LcrJesnAAAAAPccA8VQm5d4FugGfXRp_WBv-s3M"
               onChange={onChange}
             />
-          <button type='submit' onClick={handleSubmit} className="text-white border-2 bg-[#10C623] px-4 py-3 my-2 mr-auto rounded-md flex items-center transition-all transform hover:scale-110" disabled={!verified}>
+       <button type='submit' onClick={handleSubmit} className="text-white border-2 bg-[#10C623] px-4 py-3 my-2 mr-auto rounded-md flex items-center transition-all transform hover:scale-110" disabled={!verified}>
             Submit
           </button>
         </form>
