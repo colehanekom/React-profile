@@ -9,8 +9,8 @@ const About = () => {
           <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>
 
             {/* Text */}
-            <div className='sm:pb-4 pr-4'>
-              <p className='text-2xl md:text-3xl lg:text-7xl font-bold mb-2'>
+            <div className='sm:pb-4 pr-4 flex items-center flex-col'>
+              <p className='text-4xl md:text-4xl lg:text-7xl font-bold mb-2 '>
                 About <span className='text-[#10C623]'>Me</span>
               </p>
                <p className='text-sm sm:text-base md:text-lg'>
@@ -27,7 +27,7 @@ const About = () => {
             </div>
 
               {/* Image*/}
-            <div className='flex justify-center items-center'>
+            <div data-aos="zoom-in" className='flex justify-center items-center'>
               <img src={Image} alt='Image' className=' md:w-screen shadow-lg shadow-gray-400' />
             </div>
           </div>
