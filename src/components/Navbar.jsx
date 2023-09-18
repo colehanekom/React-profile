@@ -84,7 +84,7 @@ const Navbar = () => {
 
         {/*Mobile menu*/}
         {nav && (
-        <ul className="absolute top-0 left-0 w-56 bg-[#111111] flex flex-col justify-center items-center">
+        <ul className="absolute top-0 left-0 w-56 h-96 space-y-10 bg-[#111111] flex flex-col justify-center items-center">
           <MenuItem
             onClick={() => handleClick('home')}
             label="Home"
