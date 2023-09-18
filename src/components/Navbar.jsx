@@ -43,7 +43,8 @@ const Navbar = () => {
   }, []);
 
   return (
-    <div className="fixed w-full h-[70px] flex justify-between items-center px-4 bg-gradient-to-r from-[#10C623] to-[#111111] text-white text-2xl" style={{ zIndex: 1000 }}>
+    <div className="fixed w-full bg-gradient-to-r from-[#10C623] to-[#111111] text-white text-2xl">
+      <div className="w-full h-[70px] flex justify-between items-center px-4">
      
       {/* Logo (linked to home) */}
       <div>
@@ -80,11 +81,11 @@ const Navbar = () => {
         <div className="md:hidden z-10">
           {!nav ? <FaBars onClick={() => setNav(true)} /> : <FaTimes onClick={() => setNav(false)} />}
         </div>
-
+        </div>
 
         {/*Mobile menu*/}
         {nav && (
-        <ul className="absolute top-0 right-0 w-56 h-96 space-y-10 bg-[#111111] flex flex-col justify-center items-center">
+        <ul className="absolute top-[70px] right-0 w-56 h-96 space-y-10 bg-[#111111] flex flex-col justify-center items-center">
           <MenuItem
             onClick={() => handleClick('home')}
             label="Home"
