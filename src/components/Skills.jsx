@@ -12,7 +12,7 @@ const Skills = () => {
       {/* Container */}
       <div className='max-w-[1000px] mx-auto p-4 pt-24'>
         <div className='text-center'>
-          <p className='text-2xl md:text-3xl lg:text-7xl font-bold mb-2'>
+          <p className='text-4xl md:text-4xl lg:text-7xl font-bold mb-2'>
             My <span className='text-[#10C623]'>Skills</span>
           </p>
           <p className='pt-4 text-sm sm:text-base md:text-lg lg:text-2xl'>
