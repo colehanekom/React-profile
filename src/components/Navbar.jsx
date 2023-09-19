@@ -43,7 +43,7 @@ const Navbar = () => {
   }, []);
 
   return (
-    <div className="fixed w-full bg-gradient-to-r from-[#10C623] to-[#111111] text-white text-2xl">
+    <div className="fixed w-full bg-gradient-to-r from-[#10C623] to-[#111111] text-white text-2xl" style={{ zIndex: 1000 }}>
       <div className="w-full h-[70px] flex justify-between items-center px-4">
      
       {/* Logo (linked to home) */}
