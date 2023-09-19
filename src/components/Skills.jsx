@@ -10,7 +10,7 @@ const Skills = () => {
   return (
     <div name='skills' className='w-full bg-[#111111] text-white'>
       {/* Container */}
-      <div className='max-w-[1000px] mx-auto p-4 pt-24'>
+      <div className='max-w-[1000px] mx-auto p-4 lg:pt-24'>
         <div className='text-center'>
           <p className='text-4xl md:text-4xl lg:text-7xl font-bold mb-2'>
             My <span className='text-[#10C623]'>Skills</span>
