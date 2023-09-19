@@ -31,6 +31,7 @@ const Home = () => {
                   speed={50}
                   style={{ fontSize: '1em', paddingLeft: '5px' }}
                   repeat={Infinity}
+                  className="type-animation"
                 />
               </h2>
             </div>
