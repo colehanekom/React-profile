@@ -36,3 +36,8 @@
 .active {
     color: #10c623; /* Green color for active link */
   }
+
+  /* Home */
+  .type-animation::after {
+    content: ''; /* Hide the cursor */
+  }
