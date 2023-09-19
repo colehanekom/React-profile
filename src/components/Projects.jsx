@@ -31,7 +31,7 @@ const Projects = () => {
                   target='_blank'
                   rel='noopener noreferrer'
                 >
-                  <button className='animate-pulse text-center rounded-lg px-3 md:px-4 py-2 md:py-3 m-1 md:m-2 bg-white text-[#111111] font-bold text-base md:text-lg'>
+                  <button className='animate-pulse hover:bg-stone-950 hover:text-slate-50 text-center rounded-lg px-3 md:px-4 py-2 md:py-3 m-1 md:m-2 bg-white text-[#111111] font-bold text-base md:text-lg'>
                     Demo
                   </button>
                 </a>
@@ -54,7 +54,7 @@ const Projects = () => {
                   target='_blank'
                   rel='noopener noreferrer'
                 >
-                  <button className='animate-pulse text-center rounded-lg px-3 md:px-4 py-2 md:py-3 m-1 md:m-2 bg-white text-[#111111] font-bold text-base md:text-lg'>
+                  <button className='animate-pulse hover:bg-stone-950 hover:text-slate-50 text-center rounded-lg px-3 md:px-4 py-2 md:py-3 m-1 md:m-2 bg-white text-[#111111] font-bold text-base md:text-lg'>
                     Demo
                   </button>
                 </a>
@@ -77,7 +77,7 @@ const Projects = () => {
                   target='_blank'
                   rel='noopener noreferrer'
                 >
-                  <button className='animate-pulse text-center rounded-lg px-3 md:px-4 py-2 md:py-3 m-1 md:m-2 bg-white text-[#111111] font-bold text-base md:text-lg'>
+                  <button className='animate-pulse hover:bg-stone-950 hover:text-slate-50 text-center rounded-lg px-3 md:px-4 py-2 md:py-3 m-1 md:m-2 bg-white text-[#111111] font-bold text-base md:text-lg'>
                     Demo
                   </button>
                 </a>
