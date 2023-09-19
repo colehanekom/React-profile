@@ -45,7 +45,11 @@ const Home = () => {
           </div>
 
           {/* Logo Section */}
-          <div className="md:order-2">
+          <div data-aos="fade-left"
+              data-aos-anchor="#example-anchor"
+              data-aos-offset="500"
+              data-aos-duration="500" 
+              className="md:order-2">
             <img src={Logo} alt="Logo" className="w-max" />
           </div>
         </div>
