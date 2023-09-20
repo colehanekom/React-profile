@@ -194,7 +194,10 @@ const [userData, setUserData] = useState(
               sitekey="6LcrJesnAAAAAPccA8VQm5d4FugGfXRp_WBv-s3M"
               onChange={onChange}
             />
-       <button type='submit' onClick={handleSubmit} className="text-white border-2 bg-[#10C623] px-4 py-3 my-2 mr-auto rounded-md flex items-center transition-all transform hover:scale-110" disabled={!verified}>
+       <button type='submit' onClick={handleSubmit} className="text-white border-2 bg-[#10C623] px-4 py-3 my-2 mr-auto rounded-full flex items-center transition-all transform hover:scale-110" disabled={!verified}  
+            style={{
+              boxShadow: '0px 7px 5px rgba(16, 198, 35, 0.3)',
+            }}>
             Submit
           </button>
         </form>
