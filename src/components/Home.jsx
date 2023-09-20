@@ -37,7 +37,10 @@ const Home = () => {
             </div>
             <div className="mt-6 md:mt-12 text-center md:text-left">
               <a href={CV} target="_blank" rel="noopener noreferrer" className="inline-block md:block">
-                <button className="text-white border-2  bg-[#10C623] px-4 py-2 rounded-md flex items-center hover:scale-105">
+                <button className="text-white border-2  bg-[#10C623] px-4 py-2 rounded-full flex items-center hover:scale-105"  
+                  style={{
+                    boxShadow: '0px 7px 5px rgba(16, 198, 35, 0.3)',
+                  }} >
                   Download CV
                 </button>
               </a>
