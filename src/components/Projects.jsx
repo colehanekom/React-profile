@@ -12,6 +12,9 @@ const Projects = () => {
           <p className='text-4xl md:text-4xl lg:text-7xl font-bold lg:mb-16'>
             Latest <span className='text-[#10C623]'>Projects</span>
           </p>
+          <p className='pt-4 text-sm sm:text-base md:text-lg lg:text-2xl'>
+            Projects that I have worked on or have collaborated with
+          </p>
         </div>
 
         {/* Grid item */}
