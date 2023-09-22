@@ -8,7 +8,7 @@ import MySQL from '../assets/mysql.svg';
 
 const Skills = () => {
   return (
-    <div name='skills' className='w-full bg-[#111111] text-white'>
+    <div name='skills' className='w-full min-h-screen bg-[#111111] text-white'>
       {/* Container */}
       <div className='max-w-[1000px] mx-auto p-4 lg:pt-24'>
         <div className='text-center'>
