@@ -5,11 +5,11 @@ import Playstation from '../assets/playstation.png';
 
 const Projects = () => {
   return (
-    <div name='projects' className='w-full md:h-screen bg-[#111111] text-white'>
+    <div name='projects' className='w-full md:min-h-screen bg-[#111111] text-white'>
       {/* Container */}
       <div className='max-w-[1000px] mx-auto p-4 pr-14 flex flex-col justify-center w-full h-full'>
         <div className='pb-14 text-center'>
-          <p className='text-4xl md:text-4xl lg:text-7xl font-bold lg:mb-2'>
+          <p className='text-4xl md:text-4xl lg:text-7xl font-bold lg:mb-2 md:pt-16'>
             Latest <span className='text-[#10C623]'>Projects</span>
           </p>
           <p className='pt-4 text-sm sm:text-base md:text-lg lg:text-2xl'>
