@@ -144,7 +144,7 @@ const [userData, setUserData] = useState(
               <a href="https://github.com/colehanekom" target="_blank" rel="noopener noreferrer" className="text-[#10C623] hover:text-white">
                 <FaGithub size={30} />
               </a>
-              <a href="https://www.linkedin.com/mwlite/in/cole-hanekom-63a4a813b" target="_blank" rel="noopener noreferrer" className="text-[#10C623] hover:text-white">
+              <a href="https://www.linkedin.com/in/cole-hanekom-63a4a813b/" target="_blank" rel="noopener noreferrer" className="text-[#10C623] hover:text-white">
                 <FaLinkedin size={30} />
               </a>
             </div>
