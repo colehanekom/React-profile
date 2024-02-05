@@ -4,7 +4,7 @@ import CSS from '../assets/css.png';
 import JavaScript from '../assets/javascript.png';
 import Java from '../assets/java.png';
 import Python from '../assets/python.png';
-import MySQL from '../assets/mysql.svg';
+import MongoDB from '../assets/mongodb.png';
 
 const Skills = () => {
   return (
@@ -43,8 +43,8 @@ const Skills = () => {
             <p className='text-xs sm:text-sm'>Python</p>
           </div>
           <div className='shadow-md shadow-[#10C623] hover:scale-105 duration-300'>
-            <img className='w-16 sm:w-20 mx-auto py-4' src={MySQL} alt='MySQL icon' />
-            <p className='text-xs sm:text-sm'>MySQL</p>
+            <img className='w-16 sm:w-20 mx-auto py-4' src={MongoDB} alt='MongoDB icon' />
+            <p className='text-xs sm:text-sm'>MongoDB</p>
           </div>
         </div>
       </div>
