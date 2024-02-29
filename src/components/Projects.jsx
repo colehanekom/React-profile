@@ -2,6 +2,7 @@ import React from 'react';
 import School from '../assets/school.png';
 import Restaurant from '../assets/restaurant.png';
 import Playstation from '../assets/playstation.png';
+import UrbanFashion from '../assets/urbanfashion.png';
 
 const Projects = () => {
   return (
@@ -77,6 +78,30 @@ const Projects = () => {
               <div className='pt-4 md:pt-8 text-center'>
                 <a
                   href='https://gorgeous-figolla-302171.netlify.app/'
+                  target='_blank'
+                  rel='noopener noreferrer'
+                >
+                  <button className='animate-pulse hover:bg-stone-950 hover:text-slate-50 text-center rounded-lg px-3 md:px-4 py-2 md:py-3 m-1 md:m-2 bg-white text-[#111111] font-bold text-base md:text-lg'>
+                    Demo
+                  </button>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          
+          <div
+            style={{ backgroundImage: `url(${UrbanFashion})` }}
+            className='shadow-lg shadow-[#10C623] group container rounded-md flex justify-center items-center mx-3 content-div'
+          >
+            {/* Hover effects */}
+            <div className='opacity-0 group-hover:opacity-100'>
+              <span className='text-xl md:text-2xl font-bold tracking-wider'>
+                UrbanFashion Landing Page
+              </span>
+              <div className='pt-4 md:pt-8 text-center'>
+                <a
+                  href='https://cerulean-naiad-aa7614.netlify.app/'
                   target='_blank'
                   rel='noopener noreferrer'
                 >
