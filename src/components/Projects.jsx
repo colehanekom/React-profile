@@ -4,6 +4,7 @@ import Restaurant from '../assets/restaurant.png';
 import Playstation from '../assets/playstation.png';
 import UrbanFashion from '../assets/urbanfashion.png';
 import NomadNavigator from '../assets/nomadnavigator.png';
+import Camping from '../assets/camping.png';
 
 const Projects = () => {
   return (
@@ -126,6 +127,29 @@ const Projects = () => {
               <div className='pt-4 md:pt-8 text-center'>
                 <a
                   href='https://nomadnavigator.netlify.app/'
+                  target='_blank'
+                  rel='noopener noreferrer'
+                >
+                  <button className='animate-pulse hover:bg-stone-950 hover:text-slate-50 text-center rounded-lg px-3 md:px-4 py-2 md:py-3 m-1 md:m-2 bg-white text-[#111111] font-bold text-base md:text-lg'>
+                    Demo
+                  </button>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div
+            style={{ backgroundImage: `url(${Camping})` }}
+            className='shadow-lg shadow-[#10C623] group container rounded-md flex justify-center items-center mx-3 content-div'
+          >
+            {/* Hover effects */}
+            <div className='opacity-0 group-hover:opacity-100'>
+              <span className='text-xl md:text-2xl font-bold tracking-wider'>
+                Camping Website
+              </span>
+              <div className='pt-4 md:pt-8 text-center'>
+                <a
+                  href='https://neon-pothos-155562.netlify.app/'
                   target='_blank'
                   rel='noopener noreferrer'
                 >
